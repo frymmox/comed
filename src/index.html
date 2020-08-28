@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__wrap">
+      <div class="header__list">
+        <div class="header__fold">
+          <ul class="header__menu  header__menu--fold">
+            <li class="header__logo">
+              <a href="#">Логотип</a>
+            </li>
+
+            <li class="header__phone">
+              <a href="#">
+                <svg width="24" height="24">
+                  <use href="img/sprite.svg#phone"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="header__toggle">
+              <button class="header__button" type="button">
+                <svg width="32" height="32">
+                  <use href="img/sprite.svg#menu"></use>
+                  <use href="img/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__collapse">
+          <nav class="header__nav">
+            <ul class="header__menu  header__menu--collapse">
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Исследования</a></li>
+              <li><a href="#">Медицинские услуги</a></li>
+              <li><a href="#">Команда</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="header__iphone">
+            <a href="tel:+79990000000">+7(999)000-00-00</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="scene">
+    <div class="grid">
+      <div class="grid__wrap">
+        <div class="grid__list">
+          <div class="grid__item">
+            <h1>Многопрофильный научно-исследовательский центр</h1>
+
+            <p>Профессиональная команда врачей и медсестерс огромным опытом проведения
+              клиническихисследований</p>
+
+            <button type="button" class="btn">Узнать подробности</button>
+            <button type="button" class="btn">Выбрать своего врача</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feedback">
+    <div class="feedback__wrap">
+      <div class="feedback__list">
+        <div class="feedback__item  feedback__item--text">
+          <h2>У вас остались <br> к нам вопросы?</h2>
+
+          <p>Оставьте заявку на консультацию и наш специалист поможет вам найти все ответы!</p>
+        </div>
+
+        <div class="feedback__item  feedback__item--form">
+          <form class="form">
+            <div class="form__item">
+              <div class="form__field">
+                <div class="form__row">
+                  <div class="form__control">
+                    <input id="name" class="form__input" placeholder="Номер телефона" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__item">
+              <div class="form__field">
+                <div class="form__row">
+                  <div class="form__control">
+                    <input id="name" class="form__input" placeholder="Имя" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__item">
+              <div class="form__field">
+                <div class="form__row">
+                  <div class="form__control">
+                    <button class="btn" type="submit">Перезвоните мне</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p>Отправляя заявку, вы соглашаетесь с правилами обработки персональных данных и политикой конфиденциальности</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+
+  </footer>
+  <script src="libs.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

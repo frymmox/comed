@@ -1,0 +1,119 @@
+.header {
+  @media (min-width: @breakpoint-lg) {
+    padding: @block-gap-vertical @block-gap-horizontal;
+  }
+}
+
+.header__wrap {
+  max-width: @breakpoint-xxl;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: @breakpoint-lg) {
+    justify-content: space-between;
+  }
+}
+
+.header__fold {
+  @media (max-width: @breakpoint-lg - 1px) {
+    background-color: #fff;
+    padding: 16px 24px;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+.header__menu {
+  display: flex;
+
+  &--fold {
+    align-items: center;
+
+    @media (max-width: @breakpoint-lg - 1px) {
+      li:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  &--collapse {
+    @media (max-width: @breakpoint-lg - 1px) {
+      flex-direction: column;
+
+      li:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    li:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.header__phone {
+  margin-left: auto;
+
+  @media (min-width: @breakpoint-lg) {
+    display: none;
+  }
+}
+
+.header__toggle {
+  line-height: 0;
+
+  @media (min-width: @breakpoint-lg) {
+    display: none;
+  }
+
+  use {
+    fill: @body-color;
+    stroke: @body-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-property: opacity, transform;
+
+    &:last-child {
+      opacity: 0;
+      transform: scale(0.5) rotate(-45deg);
+    }
+  }
+
+  .active use {
+    &:first-child {
+      opacity: 0;
+      transform: scale(0.5) rotate(45deg);
+    }
+
+    &:last-child {
+      opacity: 1;
+      transform: scale(1) rotate(0);
+    }
+  }
+}
+
+.header__collapse {
+  @media (max-width: @breakpoint-lg - 1px) {
+    position: fixed;
+    top: 64px;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 16px 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-property: opacity, transform;
+
+    &--open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

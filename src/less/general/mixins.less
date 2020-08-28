@@ -1,0 +1,64 @@
+.btn() {
+  font-size: @text-font-size;
+  line-height: @text-line-height;
+  color: #fff;
+  background-color: #EB3300;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  padding: 8px 16px;
+  border-radius: @border-radius;
+  white-space: nowrap;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-property: background-color;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px fadeout(#EB3300, 50%, relative);
+  }
+
+  &:not([disabled]):hover {
+    background-color: multiply(#EB3300, #ccc);
+  }
+
+  &:not([disabled]):active {
+    transform: translateY(1px);
+  }
+}
+
+#form() {
+  .el() {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: @border-radius;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    color: @body-color;
+    padding: 7px 15px;
+    width: 100%;
+    appearance: none;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-property: box-shadow, color, border-color, background-color;
+
+    &:focus,
+    &:focus-within {
+      outline: none;
+      box-shadow: 0 0 0 2px fadeout(@link-color, 50%, relative);
+    }
+
+    &:not(:focus):invalid {
+      box-shadow: none;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #ccc;
+      opacity: 1;
+    }
+  }
+}
