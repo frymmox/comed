@@ -1,6 +1,11 @@
 .header {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+
   @media (min-width: @breakpoint-lg) {
-    padding: @block-gap-vertical @block-gap-horizontal;
+    padding: 40px @block-gap-horizontal;
   }
 }
 
@@ -13,6 +18,7 @@
 .header__list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 
   @media (min-width: @breakpoint-lg) {
     justify-content: space-between;
@@ -51,16 +57,26 @@
     }
 
     li:not(:last-child) {
-      margin-right: 16px;
+      margin-right: 40px;
     }
   }
 }
 
 .header__phone {
-  margin-left: auto;
+  &--mob {
+    margin-left: auto;
 
-  @media (min-width: @breakpoint-lg) {
-    display: none;
+    @media (min-width: @breakpoint-lg) {
+      display: none;
+    }
+  }
+
+  &--desk {
+    @media (max-width: @breakpoint-lg - 1px) {
+      display: none;
+    }
+
+    text-align: right;
   }
 }
 
@@ -100,7 +116,7 @@
 .header__collapse {
   @media (max-width: @breakpoint-lg - 1px) {
     position: fixed;
-    top: 64px;
+    top: 128px;
     right: 0;
     left: 0;
     background-color: #fff;

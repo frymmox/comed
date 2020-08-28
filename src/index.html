@@ -3,21 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Comed</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  <div class="header-top">
+    <div class="header-top__call">
+      <a href="#">Вызвать врача на дом</a>
+    </div>
+
+    <div class="header-top__search">
+      Поиск на сайте
+    </div>
+
+    <div class="header-top__lang">
+      Выбрать язык
+    </div>
+  </div>
+
   <header class="header">
     <div class="header__wrap">
       <div class="header__list">
         <div class="header__fold">
           <ul class="header__menu  header__menu--fold">
             <li class="header__logo">
-              <a href="#">Логотип</a>
+              <a href="#">
+                <svg width="196" height="24">
+                  <use href="img/sprite.svg#logo-black"></use>
+                </svg>
+              </a>
             </li>
 
-            <li class="header__phone">
-              <a href="#">
+            <li class="header__phone  header__phone--mob">
+              <a href="tel:+79990000000">
                 <svg width="24" height="24">
                   <use href="img/sprite.svg#phone"></use>
                 </svg>
@@ -45,16 +63,17 @@
               <li><a href="#">Контакты</a></li>
             </ul>
           </nav>
+        </div>
 
-          <div class="header__iphone">
-            <a href="tel:+79990000000">+7(999)000-00-00</a>
-          </div>
+        <div class="header__phone  header__phone--desk">
+          <p>+7(999)000-00-00</p>
+          <a href="">Заказать звонок</a>
         </div>
       </div>
     </div>
   </header>
 
-  <section class="scene">
+  <!-- <section class="scene">
     <div class="grid">
       <div class="grid__wrap">
         <div class="grid__list">
@@ -70,7 +89,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="feedback">
     <div class="feedback__wrap">
@@ -87,7 +106,7 @@
               <div class="form__field">
                 <div class="form__row">
                   <div class="form__control">
-                    <input id="name" class="form__input" placeholder="Номер телефона" required>
+                    <input class="form__input" placeholder="Номер телефона" required>
                   </div>
                 </div>
               </div>
@@ -97,7 +116,7 @@
               <div class="form__field">
                 <div class="form__row">
                   <div class="form__control">
-                    <input id="name" class="form__input" placeholder="Имя" required>
+                    <input class="form__input" placeholder="Имя" required>
                   </div>
                 </div>
               </div>
@@ -113,16 +132,95 @@
               </div>
             </div>
 
-            <p>Отправляя заявку, вы соглашаетесь с правилами обработки персональных данных и политикой конфиденциальности</p>
+            <div class="form__item">
+              <div class="form__field">
+                <div class="form__row">
+                  <div class="form__control">
+                    <p class="text-small" style="text-align: center;">Отправляя заявку, вы соглашаетесь с правилами обработки персональных данных и политикой конфиденциальности</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <footer>
+  <div class="footer">
+    <div class="footer__wrap">
+      <div class="footer__list">
+        <div class="footer__item  footer__item--link">
+          <div class="footer__logo">
+            <a href="#">
+              <svg width="190" height="24">
+                <use href="img/sprite.svg#logo-white"></use>
+              </svg>
+            </a>
+          </div>
 
-  </footer>
+          <div class="footer__phone">
+            <p>+7(999)000-00-00</p>
+            <a href="#">Заказать звонок</a>
+          </div>
+
+          <div class="footer__email">
+            <p><a href="mailto:komed@inbox.ru">komed@inbox.ru</a></p>
+            <a href="#">Задать вопрос</a>
+          </div>
+
+          <div class="footer__address">
+            <p>Москва, Большеохтинская, 13</p>
+            <a href="#">Показать на карте</a>
+          </div>
+        </div>
+
+        <div class="footer__item  footer__item--nav">
+          <div class="footer__search">
+            <form class="form">
+              <div class="form__item">
+                <div class="form__field">
+                  <div class="form__row">
+                    <div class="form__control">
+                      <input class="form__input" placeholder="Найти врача или анализ">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="footer__links">
+            <ul class="footer__menu">
+              <li>О компании</li>
+              <li>Исследования</li>
+              <li>Медицинские услуги</li>
+              <li>Команда</li>
+              <li>Акции</li>
+              <li>Новости</li>
+            </ul>
+
+            <ul class="footer__menu">
+              <li>Контакты</li>
+              <li>Карта сайта</li>
+              <li>Способы оплаты</li>
+              <li>Прайс-лист</li>
+              <li>Юр. информация</li>
+              <li>Отзывы</li>
+            </ul>
+
+            <div class="footer__action">
+              <button class="btn">Записаться на приём</button>
+
+              <button class="btn">Вызов врача на дом</button>
+
+              <a href="#">Для слабовидящих</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="libs.js"></script>
   <script src="index.js"></script>
 </body>

@@ -17,7 +17,7 @@ const html = () => {
       removeComments: true,
       collapseWhitespace: true,
     }))
-    .pipe(dest('dist'))
+    .pipe(dest('docs'))
     .pipe(sync.stream())
 }
 
@@ -34,7 +34,7 @@ const styles = () => {
     ]))
     .pipe(csso())
     .pipe(concat('index.css'))
-    .pipe(dest('dist'))
+    .pipe(dest('docs'))
     .pipe(sync.stream())
 }
 
@@ -48,7 +48,7 @@ const scriptsLibs = () => {
       'node_modules/scroll-lock/dist/scroll-lock.min.js',
     ])
     .pipe(concat('libs.js'))
-    .pipe(dest('dist'))
+    .pipe(dest('docs'))
     .pipe(sync.stream())
 };
 
@@ -63,7 +63,7 @@ const scripts = () => {
     }))
     .pipe(concat('index.js'))
     .pipe(terser())
-    .pipe(dest('dist'))
+    .pipe(dest('docs'))
     .pipe(sync.stream())
 };
 
@@ -73,7 +73,7 @@ exports.scripts = scripts
 
 const copy = () => {
   return src(['src/fonts/**/*', 'src/img/**/*'], { base: 'src' })
-    .pipe(dest('dist'))
+    .pipe(dest('docs'))
     .pipe(sync.stream({ once: true }))
 };
 
@@ -86,7 +86,7 @@ const server = () => {
     ui: false,
     notify: false,
     server: {
-      baseDir: 'dist'
+      baseDir: 'docs'
     }
   });
 };
@@ -96,7 +96,7 @@ exports.server = server
 // Clear
 
 const clear = () => {
-  return del('dist')
+  return del('docs')
 }
 
 exports.clear = clear

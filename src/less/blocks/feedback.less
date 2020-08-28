@@ -1,6 +1,9 @@
 .feedback {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  width: 100%;
+  padding-top: @block-gap-vertical;
+  padding-bottom: @block-gap-vertical;
+  padding-right: @block-gap-horizontal;
+  padding-left: @block-gap-horizontal;
   background-color: #333F48;
 
   h2 {
@@ -9,6 +12,17 @@
 
   p {
     color: #8893AA;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  @media (min-width: @breakpoint-xxl) {
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 
@@ -33,13 +47,21 @@
   border-bottom-width: @element-gap-vertical;
 
   &--text {
-    @media (min-width: @breakpoint-lg) {
+    @media (min-width: @breakpoint-md) {
+      width: 50%;
+    }
+
+    @media (min-width: @breakpoint-xxl) {
       width: 41.66%;
     }
   }
 
   &--form {
-    @media (min-width: @breakpoint-lg) {
+    @media (min-width: @breakpoint-md) {
+      width: 50%;
+    }
+
+    @media (min-width: @breakpoint-xxl) {
       width: 33.33%;
     }
   }
