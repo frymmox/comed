@@ -1,0 +1,1 @@
+"use strict";var headerButton=document.querySelector(".header__button"),headerList=document.querySelector(".header__collapse");headerButton.addEventListener("click",(function(){headerButton.classList.toggle("active"),headerList.classList.toggle("header__collapse--open"),headerButton.classList.contains("active")?scrollLock.disablePageScroll():scrollLock.enablePageScroll()}));
