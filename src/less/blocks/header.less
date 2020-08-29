@@ -4,8 +4,8 @@
   letter-spacing: -0.02em;
   font-weight: 500;
 
-  @media (min-width: @breakpoint-lg) {
-    padding: 40px @block-gap-horizontal;
+  @media (min-width: @breakpoint-xl) {
+    padding: 40px 80px;
   }
 }
 
@@ -36,6 +36,7 @@
 
 .header__menu {
   display: flex;
+  font-weight: 500;
 
   &--fold {
     align-items: center;
@@ -72,11 +73,22 @@
   }
 
   &--desk {
+    text-align: right;
+
     @media (max-width: @breakpoint-lg - 1px) {
       display: none;
     }
 
-    text-align: right;
+    p {
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      font-weight: 600;
+    }
+
+    a {
+      color: #EB3300;
+      border-bottom: 1px solid #EB3300;
+    }
   }
 }
 
@@ -115,8 +127,8 @@
 
 .header__collapse {
   @media (max-width: @breakpoint-lg - 1px) {
-    position: fixed;
-    top: 128px;
+    position: absolute;
+    top: 136px;
     right: 0;
     left: 0;
     background-color: #fff;
@@ -126,10 +138,24 @@
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
     transition-property: opacity, transform;
+    z-index: 2;
 
     &--open {
       opacity: 1;
       visibility: visible;
     }
+  }
+}
+
+.header__arrow {
+  width: 20px;
+  height: 20px;
+  background-color: #E1E4EA;
+  border-radius: 32px;
+  margin-left: 6px;
+  stroke: #8893AA;
+
+  @media (max-width: @breakpoint-lg - 1px) {
+    display: none;
   }
 }

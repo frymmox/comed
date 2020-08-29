@@ -3,16 +3,80 @@
   line-height: 1rem;
   letter-spacing: -0.02em;
   font-weight: 500;
-  display: flex;
-  justify-content: space-between;
   background-color: #333F48;
   color: #5F7686;
   padding: 24px @block-gap-horizontal;
+
+  @media (min-width: @breakpoint-xl) {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+}
+
+.header-top__wrap {
+  max-width: @breakpoint-xxl;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header-top__list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-top__call {
   a {
     color: #fff;
     border-bottom: 1px solid #fff;
+  }
+
+  .icon {
+    margin-right: 8px;
+
+    @media (min-width: @breakpoint-md) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.header-top__search {
+  display: flex;
+  align-items: center;
+
+  a {
+    color: #5F7686;
+  }
+
+  @media (min-width: @breakpoint-md) {
+    .icon {
+      margin-right: 16px;
+    }
+  }
+}
+
+.header-top__lang {
+  display: flex;
+  align-items: center;
+
+  .icon:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  @media (min-width: @breakpoint-md) {
+    .icon:not(:last-child) {
+      margin-left: 24px;
+    }
+  }
+
+  .icon {
+    :last-child {
+      margin-left: 8px;
+    }
+  }
+}
+
+.header-top__link {
+  @media (max-width: @breakpoint-md - 1px) {
+    display: none;
   }
 }

@@ -1,12 +1,15 @@
 .footer {
+  width: 100%;
   font-size: 0.875rem;
   line-height: 1rem;
   letter-spacing: -0.02em;
   font-weight: 500;
   background-color: #15181E;
-  padding-top: 80px;
-  padding-bottom: 80px;
   color: #fff;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-right: 24px;
+  padding-left: 24px;
 
   a {
     color: #fff;
@@ -38,20 +41,35 @@
   border-bottom-width: @element-gap-vertical;
 
   &--link {
-    width: 33.33%;
-  }
+    a:not([href^="mail"]) {
+      color: #8893AA;
+      border-bottom: 1px solid #8893AA;
+    }
+    p {
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      font-weight: 600;
+    }
 
-  &--link {
-    width: 33.33%;
+    @media (min-width: @breakpoint-xl) {
+      width: 33.33%;
+    }
   }
 
   &--nav {
-    width: 66.66%;
+    input {
+      background-color: transparent;
+      border-color: #333F48;
+      color: #fff;
+    }
+    @media (min-width: @breakpoint-xl) {
+      width: 66.66%;
+    }
   }
 }
 
 .footer__logo {
-  margin-bottom: 48px;
+  margin-bottom: 50px;
 }
 
 .footer__phone,
@@ -65,12 +83,14 @@
 
 .footer__links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .footer__menu {
   display: flex;
   flex-direction: column;
+  font-weight: bold;
 
   li:not(:last-child) {
     margin-bottom: 20px;
@@ -80,8 +100,17 @@
 .footer__action {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   button {
     margin-bottom: 16px;
+  }
+
+  .icon {
+    margin-right: 13px;
+  }
+
+  p {
+    margin-top: auto;
   }
 }

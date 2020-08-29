@@ -1,18 +1,18 @@
 .btn() {
-  font-size: @text-font-size;
-  line-height: @text-line-height;
+  font-size: 0.875rem;
+  line-height: 1rem;
   color: #fff;
   background-color: #EB3300;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
-  padding: 8px 16px;
+  padding: 16px 16px;
   border-radius: @border-radius;
   white-space: nowrap;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
-  transition-property: background-color;
+  transition-property: background-color, border-color;
 
   &:focus {
     outline: none;
@@ -26,6 +26,26 @@
   &:not([disabled]):active {
     transform: translateY(1px);
   }
+
+  &--black {
+    background-color: transparent;
+    border: 1px solid #333F48;
+
+    &:not([disabled]):hover {
+      background-color: transparent;
+      border-color: #fff;
+    }
+  }
+
+  &--gray {
+    color: #15181E;
+    background-color: #E1E4EA;
+
+    &:not([disabled]):hover {
+      background-color: multiply(#E1E4EA, #ccc);;
+      border-color: #fff;
+    }
+  }
 }
 
 #form() {
@@ -34,11 +54,11 @@
     border: 1px solid #ccc;
     border-radius: @border-radius;
     font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
+    font-size: 0.875rem;
+    line-height: 1rem;
     margin: 0;
     color: @body-color;
-    padding: 7px 15px;
+    padding: 15px 15px;
     width: 100%;
     appearance: none;
     transition-duration: 0.3s;
