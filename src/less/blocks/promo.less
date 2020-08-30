@@ -17,8 +17,8 @@
 }
 
 .promo__wrapper {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: @block-gap-vertical;
+  padding-bottom: @block-gap-vertical;
   max-width: @breakpoint-xxl;
   margin-left: auto;
   margin-right: auto;
@@ -27,6 +27,8 @@
 
   @media (min-width: @breakpoint-xl) {
     padding-right: 40%;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 
@@ -42,7 +44,7 @@
 }
 
 .promo__pagination {
-  @media (min-width: @breakpoint-md) {
+  @media (min-width: @breakpoint-xl) {
     display: none;
   }
 
@@ -57,7 +59,7 @@
     display: none;
   }
 
-  @media (max-width: @breakpoint-md - 1px) {
+  @media (max-width: @breakpoint-xl - 1px) {
     display: none;
   }
 }
