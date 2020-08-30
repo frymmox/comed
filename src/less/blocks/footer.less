@@ -32,6 +32,14 @@
   flex-wrap: wrap;
   margin-right: -@element-gap-horizontal;
   margin-bottom: -@element-gap-vertical;
+
+  & + & {
+    margin-top: @element-gap-vertical;
+  }
+
+  &--top {
+    align-items: center;
+  }
 }
 
 .footer__item {
@@ -40,11 +48,12 @@
   border-right-width: @element-gap-horizontal;
   border-bottom-width: @element-gap-vertical;
 
-  &--link {
+  &--first {
     a:not([href^="mail"]) {
       color: #8893AA;
       border-bottom: 1px solid #8893AA;
     }
+
     p {
       font-size: 1.125rem;
       line-height: 1.5rem;
@@ -56,7 +65,7 @@
     }
   }
 
-  &--nav {
+  &--last {
     input {
       background-color: transparent;
       border-color: #333F48;
@@ -66,10 +75,12 @@
       width: 66.66%;
     }
   }
-}
 
-.footer__logo {
-  margin-bottom: 50px;
+  &--logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .footer__phone,
@@ -77,20 +88,21 @@
   margin-bottom: 36px;
 }
 
-.footer__search {
-  margin-bottom: 48px;
-}
-
 .footer__links {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-right: -@element-gap-horizontal;
+  margin-bottom: -@element-gap-vertical;
 }
 
 .footer__menu {
   display: flex;
   flex-direction: column;
   font-weight: bold;
+  border: 0 solid transparent;
+  border-right-width: @element-gap-horizontal;
+  border-bottom-width: @element-gap-vertical;
 
   li:not(:last-child) {
     margin-bottom: 20px;
@@ -101,6 +113,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 0 solid transparent;
+  border-right-width: @element-gap-horizontal;
+  border-bottom-width: @element-gap-vertical;
 
   button {
     margin-bottom: 16px;

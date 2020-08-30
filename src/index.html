@@ -34,19 +34,74 @@
         <div class="header-top__lang">
           <span class="header-top__link">Выбрать язык</span>
 
-          <span class="icon">
-            <svg width="24" height="24">
-              <use href="img/sprite.svg#english"></use>
-            </svg>
-          </span>
+          <div class="language">
+            <span class="icon  language__flag">
+              <svg width="24" height="24">
+                <use href="img/sprite.svg#english"></use>
+              </svg>
+            </span>
 
-          <span style="color: #fff;">En</span>
+            <span class="language__name">En</span>
 
-          <span class="icon">
-            <svg width="8" height="6" stroke="#fff">
-              <use href="img/sprite.svg#arrow"></use>
-            </svg>
-          </span>
+            <span class="icon">
+              <svg width="8" height="6" stroke="#fff">
+                <use href="img/sprite.svg#arrow"></use>
+              </svg>
+            </span>
+
+            <div class="language__dropdown">
+              <ul class="language__menu">
+                <li class="language__item">
+                  <span class="icon">
+                    <svg width="24" height="24">
+                      <use href="img/sprite.svg#russia"></use>
+                    </svg>
+                  </span>
+                  Русский
+                </li>
+                <li class="language__item">
+                  <span class="icon">
+                    <svg width="24" height="24">
+                      <use href="img/sprite.svg#ukraine"></use>
+                    </svg>
+                  </span>
+                  Українська
+                </li>
+                <li class="language__item">
+                  <span class="icon">
+                    <svg width="24" height="24">
+                      <use href="img/sprite.svg#english"></use>
+                    </svg>
+                  </span>
+                  English
+                </li>
+                <li class="language__item">
+                  <span class="icon">
+                    <svg width="24" height="24">
+                      <use href="img/sprite.svg#arabia"></use>
+                    </svg>
+                  </span>
+                  العربية
+                </li>
+                <li class="language__item">
+                  <span class="icon">
+                    <svg width="24" height="24">
+                      <use href="img/sprite.svg#kazakhstan"></use>
+                    </svg>
+                  </span>
+                  Казахский
+                </li>
+                <li class="language__item">
+                  <span class="icon">
+                    <svg width="24" height="24">
+                      <use href="img/sprite.svg#vietnam"></use>
+                    </svg>
+                  </span>
+                  Tiếng Việt
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -253,8 +308,8 @@
 
   <div class="footer">
     <div class="footer__wrap">
-      <div class="footer__list">
-        <div class="footer__item  footer__item--link">
+      <div class="footer__list  footer__list--top">
+        <div class="footer__item  footer__item--first  footer__item--logo">
           <div class="footer__logo">
             <a href="#">
               <svg width="190" height="24">
@@ -263,6 +318,44 @@
             </a>
           </div>
 
+          <div class="footer__lang">
+            <div class="language">
+              <span class="icon  language__flag">
+                <svg width="24" height="24">
+                  <use href="img/sprite.svg#english"></use>
+                </svg>
+              </span>
+
+              <span class="language__name">En</span>
+
+              <span class="icon">
+                <svg width="8" height="6" stroke="#fff">
+                  <use href="img/sprite.svg#arrow"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__item  footer__item--last">
+          <div class="footer__search">
+            <form class="form">
+              <div class="form__item">
+                <div class="form__field">
+                  <div class="form__row">
+                    <div class="form__control">
+                      <input class="form__input  form__input--search" placeholder="Найти врача или анализ">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__list">
+        <div class="footer__item  footer__item--first">
           <div class="footer__phone">
             <p>+7(999)000-00-00</p>
             <a href="#">Заказать звонок</a>
@@ -279,21 +372,7 @@
           </div>
         </div>
 
-        <div class="footer__item  footer__item--nav">
-          <div class="footer__search">
-            <form class="form">
-              <div class="form__item">
-                <div class="form__field">
-                  <div class="form__row">
-                    <div class="form__control">
-                      <input class="form__input  form__input--search" placeholder="Найти врача или анализ">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-
+        <div class="footer__item  footer__item--last">
           <div class="footer__links">
             <ul class="footer__menu">
               <li><a href="#">О компании</a></li>
