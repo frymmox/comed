@@ -3,14 +3,17 @@
   display: flex;
   align-items: center;
   position: relative;
+  cursor: pointer;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -80px;
-    right: 0;
-    bottom: -20px;
+  @media (min-width: @breakpoint-xl) {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -80px;
+      right: 0;
+      bottom: -20px;
+    }
   }
 }
 
@@ -30,8 +33,14 @@
   right: 0;
   display: none;
 
-  .language:hover & {
+  &--active {
     display: block;
+  }
+
+  @media (min-width: @breakpoint-xl) {
+    .language:hover & {
+      display: block;
+    }
   }
 }
 

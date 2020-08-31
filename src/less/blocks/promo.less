@@ -32,6 +32,14 @@
   }
 }
 
+.promo__content {
+  @media (max-width: @breakpoint-lg - 1px) {
+    .nowrap {
+      white-space: normal;
+    }
+  }
+}
+
 .promo__image {
   position: absolute;
   top: 0;
@@ -55,6 +63,10 @@
 
 .promo__prev,
 .promo__next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &::after {
     display: none;
   }
@@ -69,10 +81,10 @@
 }
 
 .promo__next {
-  right: 16px;
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
+  right: 0;
+  width: 124px;
+  height: 124px;
+  border-radius: 50% 0 0 50%;
   background: linear-gradient(270deg, #FFFFFF, rgba(255, 255, 255, 0) 100%);
   opacity: 0.5;
 

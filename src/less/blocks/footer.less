@@ -13,6 +13,10 @@
 
   a {
     color: #fff;
+
+    &:hover {
+      color: #EB3300;
+    }
   }
 
   button {
@@ -49,11 +53,6 @@
   border-bottom-width: @element-gap-vertical;
 
   &--first {
-    a:not([href^="mail"]) {
-      color: #8893AA;
-      border-bottom: 1px solid #8893AA;
-    }
-
     p {
       font-size: 1.125rem;
       line-height: 1.5rem;
@@ -80,8 +79,27 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    a {
+      color: @link-color;
+    }
   }
 }
+
+.footer__phone,
+.footer__email,
+.footer__address {
+  a:not([href^="mail"]) {
+    color: #8893AA;
+    border-bottom: 1px solid #8893AA;
+
+    &:hover {
+      color: #EB3300;
+      border-color: #EB3300;
+    }
+  }
+}
+
 
 .footer__phone,
 .footer__email {
@@ -127,5 +145,6 @@
 
   p {
     margin-top: auto;
+    align-self: start;
   }
 }

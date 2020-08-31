@@ -11,4 +11,8 @@ const Swiper = new Swiper('.swiper-container', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-})
+});
+
+const inputPhone = document.querySelector('.input-phone');
+
+Inputmask({"mask": "+7(999) 999-99-99"}).mask(inputPhone);

@@ -60,6 +60,7 @@ const scriptsLibs = () => {
       'node_modules/focus-visible/dist/focus-visible.min.js',
       'node_modules/scroll-lock/dist/scroll-lock.min.js',
       'node_modules/swiper/swiper-bundle.min.js',
+      'node_modules/inputmask/dist/inputmask.min.js'
     ])
     .pipe(concat('libs.js'))
     .pipe(dest('docs'))

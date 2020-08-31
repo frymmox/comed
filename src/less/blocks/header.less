@@ -19,10 +19,6 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
-  @media (min-width: @breakpoint-xl) {
-    justify-content: space-between;
-  }
 }
 
 .header__fold {
@@ -31,6 +27,16 @@
     padding: 16px 24px;
     width: 100%;
     z-index: 1;
+  }
+
+  @media (min-width: @breakpoint-xl) {
+    width: 20%;
+  }
+}
+
+.header__nav {
+  @media (max-width: @breakpoint-xl - 1px) {
+    margin-top: 32px;
   }
 }
 
@@ -57,9 +63,41 @@
       }
     }
 
-    li:not(:last-child) {
+    & > li:not(:last-child) {
       margin-right: 40px;
     }
+  }
+}
+
+.header__link {
+  position: relative;
+  cursor: pointer;
+
+  @media (max-width: @breakpoint-xl - 1px) {
+    font-size: 1.25rem;
+    line-height: 2rem;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: @breakpoint-xl) {
+    a {
+      position: relative;
+      z-index: 3;
+    }
+  }
+}
+
+.header__dropdown {
+  @media (min-width: @breakpoint-xl) {
+    display: none;
+  }
+
+  .header__link:hover & {
+    display: block;
   }
 }
 
@@ -77,6 +115,10 @@
 
     @media (max-width: @breakpoint-xl - 1px) {
       display: none;
+    }
+
+    @media (min-width: @breakpoint-xl) {
+      margin-left: auto;
     }
 
     p {
@@ -102,35 +144,24 @@
   use {
     fill: @body-color;
     stroke: @body-color;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-    transition-property: opacity, transform;
-
-    &:last-child {
-      opacity: 0;
-      transform: scale(0.5) rotate(-45deg);
-    }
   }
+}
 
-  .active use {
-    &:first-child {
-      opacity: 0;
-      transform: scale(0.5) rotate(45deg);
-    }
+.header__close {
+  float: right;
 
-    &:last-child {
-      opacity: 1;
-      transform: scale(1) rotate(0);
-    }
+  @media (min-width: @breakpoint-xl) {
+    display: none;
   }
 }
 
 .header__collapse {
   @media (max-width: @breakpoint-xl - 1px) {
-    position: absolute;
-    top: 136px;
+    position: fixed;
+    top: 0;
     right: 0;
     left: 0;
+    bottom: 0;
     background-color: #fff;
     padding: 16px 24px;
     opacity: 0;
@@ -139,6 +170,7 @@
     transition-timing-function: ease-out;
     transition-property: opacity, transform;
     z-index: 2;
+    overflow-y: auto;
 
     &--open {
       opacity: 1;
@@ -156,6 +188,6 @@
   stroke: #8893AA;
 
   @media (max-width: @breakpoint-xl - 1px) {
-    display: none;
+    margin-left: 12px;
   }
 }

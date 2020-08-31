@@ -1,12 +1,13 @@
-const headerButton = document.querySelector('.header__button')
+const headerOpen = document.querySelector('.header__open')
+const headerClose = document.querySelector('.header__close')
 const headerList = document.querySelector('.header__collapse')
 
-headerButton.addEventListener('click', () => {
-  headerButton.classList.toggle('active')
-  headerList.classList.toggle('header__collapse--open')
-  if (headerButton.classList.contains('active')) {
-    scrollLock.disablePageScroll()
-  } else {
-    scrollLock.enablePageScroll()
-  }
+headerOpen.addEventListener('click', () => {
+  headerList.classList.add('header__collapse--open')
+  scrollLock.disablePageScroll()
+})
+
+headerClose.addEventListener('click', () => {
+  headerList.classList.remove('header__collapse--open')
+  scrollLock.enablePageScroll()
 })
