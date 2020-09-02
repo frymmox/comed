@@ -1,526 +1,198 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comed</title>
-  <link rel="stylesheet" href="libs.css">
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  <div class="header-top">
-    <div class="header-top__wrap">
-      <div class="header-top__list">
-        <div class="header-top__call">
-          <span class="icon">
-            <svg width="18" height="18">
-              <use href="img/sprite.svg#bag"></use>
-            </svg>
-          </span>
-          <a href="#">Вызвать врача на дом</a>
-        </div>
+@@include('inc/doc-start.html', {
+	"title": "Komed"
+})
 
-        <div class="header-top__search">
-          <form class="form">
-            <div class="form__item">
-              <div class="form__field">
-                <div class="form__row">
-                  <div class="form__control">
-                    <input class="form__input" placeholder="Поиск на сайте">
-                  </div>
-                </div>
+@@include('inc/page-header.html')
+
+<section class="promo">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide  promo__slide">
+          <img class="promo__image" src="img/reception.jpg" alt="">
+
+          <div class="promo__wrapper">
+            <div class="promo__content">
+              <div class="promo__title">
+                <h1>Многопрофильный <span class="nowrap">научно-исследовательский</span> центр</h1>
+              </div>
+
+              <div class="promo__text">
+                <p>Профессиональная команда врачей и медсестер с огромным опытом проведения
+                  клинических исследований</p>
               </div>
             </div>
-          </form>
-        </div>
 
-        <div class="header-top__lang">
-          <span class="header-top__link">Выбрать язык</span>
+            <div class="promo__action">
+              <button type="button" class="btn">Узнать подробности</button>
 
-          <div class="language">
-            <span class="icon  language__flag">
-              <svg width="24" height="24">
-                <use href="img/sprite.svg#english"></use>
-              </svg>
-            </span>
-
-            <span class="language__name">En</span>
-
-            <span class="icon">
-              <svg width="8" height="6" stroke="#fff">
-                <use href="img/sprite.svg#arrow"></use>
-              </svg>
-            </span>
-
-            <div class="language__dropdown">
-              <ul class="language__menu">
-                <li class="language__item">
-                  <span class="icon">
-                    <svg width="24" height="24">
-                      <use href="img/sprite.svg#russia"></use>
-                    </svg>
-                  </span>
-                  <a href="#">Русский</a>
-                </li>
-                <li class="language__item">
-                  <span class="icon">
-                    <svg width="24" height="24">
-                      <use href="img/sprite.svg#ukraine"></use>
-                    </svg>
-                  </span>
-
-                  <a href="#">Українська</a>
-                </li>
-                <li class="language__item  language__item--active">
-                  <span class="icon">
-                    <svg width="24" height="24">
-                      <use href="img/sprite.svg#english"></use>
-                    </svg>
-                  </span>
-                  <a href="#">English</a>
-                </li>
-                <li class="language__item">
-                  <span class="icon">
-                    <svg width="24" height="24">
-                      <use href="img/sprite.svg#arabia"></use>
-                    </svg>
-                  </span>
-                  <a href="#">العربية</a>
-                </li>
-                <li class="language__item">
-                  <span class="icon">
-                    <svg width="24" height="24">
-                      <use href="img/sprite.svg#kazakhstan"></use>
-                    </svg>
-                  </span>
-                  <a href="#">Казахский</a>
-                </li>
-                <li class="language__item">
-                  <span class="icon">
-                    <svg width="24" height="24">
-                      <use href="img/sprite.svg#vietnam"></use>
-                    </svg>
-                  </span>
-                  <a href="#">Tiếng Việt</a>
-                </li>
-              </ul>
+              <button type="button" class="btn  btn--gray">Выбрать своего врача</button>
             </div>
           </div>
         </div>
-      </div>
+
+        <div class="swiper-slide  promo__slide">
+          <img class="promo__image" src="img/medical.jpg" alt="">
+
+          <div class="promo__wrapper">
+            <div class="promo__content">
+              <div class="promo__title">
+                <h2>Многопрофильный <span class="nowrap">научно-исследовательский</span> центр</h2>
+              </div>
+
+              <div class="promo__text">
+                <p>Профессиональная команда врачей и медсестер с огромным опытом проведения
+                  клинических исследований</p>
+              </div>
+            </div>
+
+            <div class="promo__action">
+              <button type="button" class="btn">Узнать подробности</button>
+
+              <button type="button" class="btn  btn--gray">Выбрать своего врача</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="swiper-pagination  promo__pagination"></div>
+
+    <div class="swiper-button-prev  promo__prev">
+      <span class="icon">
+        <svg width="34" height="26">
+          <use href="img/sprite.svg#arrow-horizontal"></use>
+        </svg>
+      </span>
+    </div>
+
+    <div class="swiper-button-next  promo__next">
+      <span class="icon">
+        <svg width="34" height="26">
+          <use href="img/sprite.svg#arrow-horizontal"></use>
+        </svg>
+      </span>
     </div>
   </div>
+</section>
 
-  <header class="header">
-    <div class="header__wrap">
-      <div class="header__list">
-        <div class="header__fold">
-          <ul class="header__menu  header__menu--fold">
-            <li class="header__logo">
-              <a href="#">
-                <svg width="196" height="24">
-                  <use href="img/sprite.svg#logo-black"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="header__phone  header__phone--mob">
-              <a href="tel:+79990000000">
-                <svg width="24" height="24">
-                  <use href="img/sprite.svg#phone"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="header__toggle">
-              <button class="header__open" type="button">
-                <svg width="32" height="32">
-                  <use href="img/sprite.svg#menu"></use>
-                </svg>
-              </button>
-            </li>
-          </ul>
-        </div>
-
-        <div class="header__collapse">
-          <button class="header__close" type="button">
-            <svg width="32" height="32">
-              <use href="img/sprite.svg#cross"></use>
-            </svg>
-          </button>
-
-          <nav class="header__nav">
-            <ul class="header__menu  header__menu--collapse">
-              <li class="header__link">
-                <a href="#" class="js-collapse-toggle" data-target="#menu-company">
-                  О компании
-                  <span class="icon  header__arrow">
-                    <svg width="8" height="6">
-                      <use href="img/sprite.svg#arrow"></use>
-                    </svg>
-                  </span>
-                </a>
-
-                <div id="menu-company" class="header__dropdown  menu-dropdown">
-                  <ul class="menu-dropdown__list">
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  </ul>
-                </div>
-              </li>
-
-              <li class="header__link">
-                <a href="#" class="js-collapse-toggle" data-target="#menu-researches">
-                  Исследования
-                  <span class="icon  header__arrow">
-                    <svg width="8" height="6">
-                      <use href="img/sprite.svg#arrow"></use>
-                    </svg>
-                  </span>
-                </a>
-
-                <div id="menu-researches" class="header__dropdown  menu-dropdown">
-                  <ul class="menu-dropdown__list">
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  </ul>
-                </div>
-              </li>
-
-              <li class="header__link">
-                <a href="#" class="js-collapse-toggle" data-target="#menu-services">
-                  Медицинские услуги
-                  <span class="icon  header__arrow">
-                    <svg width="8" height="6">
-                      <use href="img/sprite.svg#arrow"></use>
-                    </svg>
-                  </span>
-                </a>
-
-                <div id="menu-services" class="header__dropdown  menu-dropdown">
-                  <ul class="menu-dropdown__list">
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  </ul>
-                </div>
-              </li>
-
-              <li class="header__link">
-                <a href="#" class="js-collapse-toggle" data-target="#menu-team">
-                  Команда
-                  <span class="icon  header__arrow">
-                    <svg width="8" height="6">
-                      <use href="img/sprite.svg#arrow"></use>
-                    </svg>
-                  </span>
-                </a>
-
-                <div id="menu-team" class="header__dropdown  menu-dropdown">
-                  <ul class="menu-dropdown__list">
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                    <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="header__link"><a href="#">Контакты</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="header__phone  header__phone--desk">
-          <p>+7(999)000-00-00</p>
-          <a href="">Заказать звонок</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section class="promo">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-          <div class="swiper-slide  promo__slide">
-            <img class="promo__image" src="img/reception.jpg" alt="">
-
-            <div class="promo__wrapper">
-              <div class="promo__content">
-                <h2 class="h1">Многопрофильный <span class="nowrap">научно-исследовательский</span> центр</h2>
-
-                <p>Профессиональная команда врачей и медсестер с огромным опытом проведения
-                клинических исследований</p>
-              </div>
-
-              <div class="promo__action">
-                <button type="button" class="btn">Узнать подробности</button>
-
-                <button type="button" class="btn  btn--gray">Выбрать своего врача</button>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide  promo__slide">
-            <img class="promo__image" src="img/medical.jpg" alt="">
-
-            <div class="promo__wrapper">
-              <div class="promo__content">
-                <h2 class="h1">Многопрофильный <span class="nowrap">научно-исследовательский</span> центр</h2>
-
-                <p>Профессиональная команда врачей и медсестер с огромным опытом проведения
-                клинических исследований</p>
-              </div>
-
-              <div class="promo__action">
-                <button type="button" class="btn">Узнать подробности</button>
-
-                <button type="button" class="btn  btn--gray">Выбрать своего врача</button>
-              </div>
-            </div>
-          </div>
-      </div>
-
-      <div class="swiper-pagination  promo__pagination"></div>
-
-      <div class="swiper-button-prev  promo__prev">
-        <span class="icon">
-          <svg width="34" height="26">
-            <use href="img/sprite.svg#arrow-horizontal"></use>
-          </svg>
-        </span>
-      </div>
-
-      <div class="swiper-button-next  promo__next">
-        <span class="icon">
-          <svg width="34" height="26">
-            <use href="img/sprite.svg#arrow-horizontal"></use>
-          </svg>
-        </span>
-      </div>
-    </div>
-  </section>
-
-  <section class="feedback">
-    <div class="feedback__wrap">
-      <div class="feedback__list">
-        <div class="feedback__item  feedback__item--text">
+<section class="feedback">
+  <div class="feedback__wrap">
+    <div class="feedback__list">
+      <div class="feedback__item  feedback__item--text">
+        <div class="wysiwyg">
           <h2>У&nbsp;вас остались к&nbsp;нам вопросы?</h2>
 
           <p>Оставьте заявку на&nbsp;консультацию и&nbsp;наш специалист поможет вам найти все ответы!</p>
         </div>
+      </div>
 
-        <div class="feedback__item  feedback__item--form">
-          <form class="form">
-            <div class="form__item">
-              <div class="form__field">
-                <div class="form__row">
-                  <div class="form__control">
-                    <input class="form__input  form__input--phone  input-phone" placeholder="Номер телефона" required>
-                  </div>
+      <div class="feedback__item  feedback__item--form">
+        <form class="form">
+          <div class="form__item">
+            <div class="form__field">
+              <div class="form__row">
+                <div class="form__control">
+                  <input class="form__input  form__input--phone  input-phone" placeholder="Номер телефона" required>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="form__item">
-              <div class="form__field">
-                <div class="form__row">
-                  <div class="form__control">
-                    <input class="form__input  form__input--name" placeholder="Имя" required>
-                  </div>
+          <div class="form__item">
+            <div class="form__field">
+              <div class="form__row">
+                <div class="form__control">
+                  <input class="form__input  form__input--name" placeholder="Имя" required>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="form__item">
-              <div class="form__field">
-                <div class="form__row">
-                  <div class="form__control">
-                    <button class="btn" type="submit">Перезвоните мне</button>
-                  </div>
+          <div class="form__item">
+            <div class="form__field">
+              <div class="form__row">
+                <div class="form__control">
+                  <button class="btn" type="submit">Перезвоните мне</button>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="form__item">
-              <div class="form__field">
-                <div class="form__row">
-                  <div class="form__control">
-                    <p class="text-small" style="text-align: center;">Отправляя заявку, вы соглашаетесь с правилами обработки персональных данных и политикой конфиденциальности</p>
-                  </div>
+          <div class="form__item">
+            <div class="form__field">
+              <div class="form__row">
+                <div class="form__control">
+                  <p class="text-small" style="text-align: center;">Отправляя заявку, вы соглашаетесь с правилами обработки персональных данных и политикой конфиденциальности</p>
                 </div>
               </div>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <div class="footer">
-    <div class="footer__wrap">
-      <div class="footer__list  footer__list--top">
-        <div class="footer__item  footer__item--first  footer__item--logo">
-          <div class="footer__logo">
-            <a href="#">
-              <svg width="190" height="24">
-                <use href="img/sprite.svg#logo-white"></use>
-              </svg>
-            </a>
-          </div>
+<section class="about">
+  <div class="about__wrap">
+    <div class="about__content">
+      <div class="about__title">
+        <h2>Немного о нас</h2>
+      </div>
 
-          <div class="footer__lang">
-            <div class="language">
-              <span class="icon  language__flag">
-                <svg width="24" height="24">
-                  <use href="img/sprite.svg#english"></use>
-                </svg>
-              </span>
+      <div class="about__text">
+        <p>Медицинский исследовательский центр &laquo;КоМед&raquo; является структурным подразделением компании &laquo;Лиганд Ресерч&raquo;. С&nbsp;2011 года мы&nbsp;проводим научные медицинские исследования, направленные на&nbsp;изучение новых методов лечения и&nbsp;оценки эффективности лекарств и&nbsp;оборудования до&nbsp;вывода их&nbsp;на&nbsp;рынок&nbsp;РФ.</p>
+      </div>
+    </div>
 
-              <span class="language__name">En</span>
+    <div class="about__list">
+      <div class="about__item">
+        <div class="about__card">
+          <svg width="40" height="40">
+            <use href="img/sprite.svg#med-cross"></use>
+          </svg>
 
-              <span class="icon">
-                <svg width="8" height="6" stroke="#fff">
-                  <use href="img/sprite.svg#arrow"></use>
-                </svg>
-              </span>
+          <h3>Заголовок триггера</h3>
 
-              <div class="language__dropdown">
-                <ul class="language__menu">
-                  <li class="language__item">
-                    <span class="icon">
-                      <svg width="24" height="24">
-                        <use href="img/sprite.svg#russia"></use>
-                      </svg>
-                    </span>
-                    <a href="#">Русский</a>
-                  </li>
-                  <li class="language__item">
-                    <span class="icon">
-                      <svg width="24" height="24">
-                        <use href="img/sprite.svg#ukraine"></use>
-                      </svg>
-                    </span>
-
-                    <a href="#">Українська</a>
-                  </li>
-                  <li class="language__item  language__item--active">
-                    <span class="icon">
-                      <svg width="24" height="24">
-                        <use href="img/sprite.svg#english"></use>
-                      </svg>
-                    </span>
-                    <a href="#">English</a>
-                  </li>
-                  <li class="language__item">
-                    <span class="icon">
-                      <svg width="24" height="24">
-                        <use href="img/sprite.svg#arabia"></use>
-                      </svg>
-                    </span>
-                    <a href="#">العربية</a>
-                  </li>
-                  <li class="language__item">
-                    <span class="icon">
-                      <svg width="24" height="24">
-                        <use href="img/sprite.svg#kazakhstan"></use>
-                      </svg>
-                    </span>
-                    <a href="#">Казахский</a>
-                  </li>
-                  <li class="language__item">
-                    <span class="icon">
-                      <svg width="24" height="24">
-                        <use href="img/sprite.svg#vietnam"></use>
-                      </svg>
-                    </span>
-                    <a href="#">Tiếng Việt</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer__item  footer__item--last">
-          <div class="footer__search">
-            <form class="form">
-              <div class="form__item">
-                <div class="form__field">
-                  <div class="form__row">
-                    <div class="form__control">
-                      <input class="form__input  form__input--search" placeholder="Найти врача или анализ">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
+          <p>Товарищи! постоянный количественный рост и сфера нашей активности влечет за собой процессы</p>
         </div>
       </div>
 
-      <div class="footer__list">
-        <div class="footer__item  footer__item--first">
-          <div class="footer__phone">
-            <p>+7(999)000-00-00</p>
-            <a href="#">Заказать звонок</a>
-          </div>
+      <div class="about__item">
+        <div class="about__card">
+          <svg width="40" height="40">
+            <use href="img/sprite.svg#med-cross"></use>
+          </svg>
 
-          <div class="footer__email">
-            <p><a href="mailto:komed@inbox.ru">komed@inbox.ru</a></p>
-            <a href="#">Задать вопрос</a>
-          </div>
+          <h3>Заголовок триггера</h3>
 
-          <div class="footer__address">
-            <p>Москва, Большеохтинская, 13</p>
-            <a href="#">Показать на карте</a>
-          </div>
+          <p>Товарищи! постоянный количественный рост и сфера нашей активности влечет за собой процессы</p>
         </div>
+      </div>
 
-        <div class="footer__item  footer__item--last">
-          <div class="footer__links">
-            <ul class="footer__menu">
-              <li><a href="#">О компании</a></li>
-              <li><a href="#">Исследования</a></li>
-              <li><a href="#">Медицинские услуги</a></li>
-              <li><a href="#">Команда</a></li>
-              <li><a href="#">Акции</a></li>
-              <li><a href="#">Новости</a></li>
-            </ul>
+      <div class="about__item">
+        <div class="about__card">
+          <svg width="40" height="40">
+            <use href="img/sprite.svg#med-cross"></use>
+          </svg>
 
-            <ul class="footer__menu">
-              <li><a href="#">Контакты</a></li>
-              <li><a href="#">Карта сайта</a></li>
-              <li><a href="#">Способы оплаты</a></li>
-              <li><a href="#">Прайс-лист</a></li>
-              <li><a href="#">Юр. информация</a></li>
-              <li><a href="#">Отзывы</a></li>
-            </ul>
+          <h3>Заголовок триггера</h3>
 
-            <div class="footer__action">
-              <button class="btn  btn--black">Записаться на приём</button>
-
-              <button class="btn  btn--black">Вызов врача на дом</button>
-
-              <p>
-                <span class="icon">
-                  <svg width="18" height="18">
-                    <use href="img/sprite.svg#eye"></use>
-                  </svg>
-                </span>
-
-                <a href="#">Для слабовидящих</a>
-              </p>
-            </div>
-          </div>
+          <p>Товарищи! постоянный количественный рост и сфера нашей активности влечет за собой процессы</p>
         </div>
       </div>
     </div>
   </div>
-  <script src="libs.js"></script>
-  <script src="index.js"></script>
-</body>
-</html>
+</section>
+
+<section class="news">
+  <div class="news__wrap">
+    <h2>Акции и новости</h2>
+
+    <p>Следите за&nbsp;акцими нашей клиники, чтобы всегда быть вкурсе самых выгодных услових</p>
+  </div>
+
+</section>
+
+@@include('inc/page-footer.html')
+
+@@include('inc/doc-end.html')

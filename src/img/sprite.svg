@@ -239,4 +239,10 @@
   <symbol id="check" viewBox="0 0 24 24">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M9.70711 14.2929L19 5L20.4142 6.41421L9.70711 17.1213L4 11.4142L5.41421 10L9.70711 14.2929Z" fill="#EB3300"/>
   </symbol>
+
+  <symbol id="med-cross" viewBox="0 0 40 40">
+    <rect width="40" height="40" rx="20" fill="#E1E4EA"/>
+    <rect x="17" y="11" width="6" height="18" fill="white"/>
+    <rect x="29" y="17" width="6" height="18" transform="rotate(90 29 17)" fill="white"/>
+  </symbol>
 </svg>

@@ -1,61 +1,73 @@
-.feedback {
+.about {
   width: 100%;
   padding-top: var(--block-gap-vertical, @block-gap-vertical);
   padding-bottom: var(--block-gap-vertical, @block-gap-vertical);
   padding-right: var(--block-gap-horizontal, @block-gap-horizontal);
   padding-left: var(--block-gap-horizontal, @block-gap-horizontal);
-  background-color: #333F48;
 
-  h2 {
-    color: #fff;
-  }
-
-  p {
-    color: #8893AA;
-  }
-
-  button {
-    width: 100%;
+  @media (min-width: @breakpoint-xl) {
+    padding-top: 136px;
+    padding-bottom: 136px;
   }
 }
 
-.feedback__wrap {
+.about__wrap {
   max-width: @breakpoint-lg;
   margin-left: auto;
   margin-right: auto;
 }
 
-.feedback__list {
+.about__content {
+  margin-bottom: 2.2em;
+}
+
+.about__title {
+  margin-bottom: 0.8em;
+
+  h2 {
+    font-size: 3.75rem;
+    line-height: 4.75rem;
+
+    @media (max-width: @breakpoint-md - 1px) {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+}
+
+.about__list {
   display: flex;
   flex-wrap: wrap;
   margin-right: ~"calc(var(--element-gap-horizontal, @{element-gap-horizontal}) * -1)";
   margin-bottom: ~"calc(var(--element-gap-vertical, @{element-gap-vertical}) * -1)";
-  justify-content: space-between;
 }
 
-.feedback__item {
+.about__item {
   width: 100%;
   border: 0 solid transparent;
   border-right-width: var(--element-gap-horizontal, @element-gap-horizontal);
   border-bottom-width: var(--element-gap-vertical, @element-gap-vertical);
 
-  &--text {
-    @media (min-width: @breakpoint-md) {
-      width: 50%;
-    }
+  @media (min-width: @breakpoint-md) {
+    width: 33.33%;
+  }
+}
 
-    @media (min-width: @breakpoint-xl) {
-      width: 41.66%;
-    }
+.about__card {
+  svg {
+    margin-bottom: 1.2em;
   }
 
-  &--form {
-    @media (min-width: @breakpoint-md) {
-      width: 50%;
-    }
+  h3 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+    margin-bottom: 0.4em;
+  }
 
-    @media (min-width: @breakpoint-xl) {
-      width: 33.33%;
-    }
+  p {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.03em;
+    font-weight: 500;
   }
 }

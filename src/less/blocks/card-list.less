@@ -1,0 +1,18 @@
+.card-list {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: ~"calc(var(--element-gap-horizontal, @{element-gap-horizontal}) * -1)";
+  margin-bottom: ~"calc(var(--element-gap-vertical, @{element-gap-vertical}) * -1)";
+}
+
+.card-list__item {
+  width: 100%;
+  border: 0 solid transparent;
+  border-right-width: var(--element-gap-horizontal, @element-gap-horizontal);
+  border-bottom-width: var(--element-gap-vertical, @element-gap-vertical);
+
+  @media (min-width: @breakpoint-md) {
+    width: 50%;
+  }
+}

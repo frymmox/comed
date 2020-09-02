@@ -5,7 +5,7 @@ const postcss = require('gulp-postcss')
 const csso = require('gulp-csso')
 const concat = require('gulp-concat')
 const del = require('del')
-const htmlmin = require('gulp-htmlmin')
+const fileinclude = require('gulp-file-include')
 const terser = require('gulp-terser')
 const sync = require('browser-sync').create()
 
@@ -13,10 +13,7 @@ const sync = require('browser-sync').create()
 
 const html = () => {
   return src('src/*.html')
-    .pipe(htmlmin({
-      removeComments: true,
-      collapseWhitespace: true,
-    }))
+    .pipe(fileinclude())
     .pipe(dest('docs'))
     .pipe(sync.stream())
 }

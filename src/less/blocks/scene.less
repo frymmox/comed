@@ -1,8 +1,11 @@
 .scene {
   width: 100%;
-  padding: @block-gap-vertical @block-gap-horizontal;
+  padding-top: var(--block-gap-vertical, @block-gap-vertical);
+  padding-right: var(--block-gap-horizontal, @block-gap-horizontal);
+  padding-bottom: var(--block-gap-vertical, @block-gap-vertical);
+  padding-left: var(--block-gap-horizontal, @block-gap-horizontal);
 
-  & + & {
+  & + &:not(&--fill) {
     padding-top: 0;
   }
 }
