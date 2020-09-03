@@ -2,6 +2,6 @@
 
 ## Getting Started
 
-1. `npm ci` this repo
+1. `npm ci`
 
 2. `npm run dev`
