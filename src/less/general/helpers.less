@@ -19,6 +19,12 @@
   line-height: 1.25rem;
 }
 
+.text-desc {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.03em;
+}
+
 .icon {
   display: inline-flex;
   justify-content: center;
@@ -29,4 +35,14 @@
 
 .nowrap {
   white-space: nowrap;
+}
+
+.link {
+  &--border {
+    border-bottom: 1px solid @body-color;
+
+    &:hover {
+      border-bottom: 1px solid #EB3300;
+    }
+  }
 }

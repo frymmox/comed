@@ -22,7 +22,7 @@
             <use href="img/sprite.svg#bag"></use>
           </svg>
         </span>
-        <a href="#">Вызвать врача на дом</a>
+        <span type="button" href="#" class="link  js-modal-open">Вызвать врача на дом</span>
       </div>
 
       <div class="header-top__search">
@@ -211,7 +211,7 @@
                   <li class="menu-dropdown__item"><a href="diagnostics.html">Диагностика</a></li>
                   <li class="menu-dropdown__item"><a href="laser-medicine.html">Центр лазерной медицины</a></li>
                   <li class="menu-dropdown__item"><a href="commitment-therapy.html">Центр приверженности терапии</a></li>
-                  <li class="menu-dropdown__item"><a href="policy-oms.html">Медицинская помощьпо полису ОМС</a></li>
+                  <li class="menu-dropdown__item"><a href="policy-oms.html">Медицинская помощь по полису ОМС</a></li>
                 </ul>
               </div>
             </li>
@@ -235,7 +235,7 @@
                 </ul>
               </div>
             </li>
-            <li class="header__link"><a href="#">Контакты</a></li>
+            <li class="header__link"><a href="contacts.html">Контакты</a></li>
           </ul>
         </nav>
       </div>
@@ -250,6 +250,18 @@
 
 <main class="main">
 
+
+<div class="breadcrumbs">
+	<div class="breadcrumbs__wrap">
+		<ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+      <li class="breadcrumbs__divider">/</li>
+      <li class="breadcrumbs__item"><a href="researches.html">Исследования</a></li>
+      <li class="breadcrumbs__divider">/</li>
+      <li class="breadcrumbs__item  breadcrumbs__item--disabled"><a href="researches.html">Центр поддержки пациентов</a></li>
+		</ul>
+	</div>
+</div>
 
 <section class="scene">
 	<div class="grid">
@@ -366,9 +378,9 @@
     <div class="feedback__list">
       <div class="feedback__item  feedback__item--text">
         <div class="wysiwyg">
-          <h2>У&nbsp;вас остались к&nbsp;нам вопросы?</h2>
+          <h2>Форма участника</h2>
 
-          <p>Оставьте заявку на&nbsp;консультацию и&nbsp;наш специалист поможет вам найти все ответы!</p>
+          <p>Отправляя заявку, вы соглашаетесь с правилами обработки персональных данных и политикой конфиденциальности</p>
         </div>
       </div>
 
@@ -557,7 +569,7 @@
             <li><a href="#">Карта сайта</a></li>
             <li><a href="#">Способы оплаты</a></li>
             <li><a href="#">Прайс-лист</a></li>
-            <li><a href="#">Юр. информация</a></li>
+            <li><a href="legal-information.html">Юр. информация</a></li>
             <li><a href="#">Отзывы</a></li>
           </ul>
 
@@ -581,6 +593,74 @@
     </div>
   </div>
 </footer>
+
+<div class="modal">
+  <div class="modal__overlay"></div>
+
+  <div class="modal__window">
+    <div class="modal__close">
+      <button class="js-modal-close" aria-label="Закрыть" type="button">
+        <svg width="32" height="32">
+          <use href="img/sprite.svg#cross"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal__content">
+      <section class="scene">
+        <div class="grid">
+          <div class="grid__wrap">
+            <div class="grid__list  grid__list--two">
+              <div class="grid__item">
+                <div class="wysiwyg">
+                  <h2>Вызвать врача на&nbsp;дом</h2>
+
+                  <p class="text-desc">Оставьте свои контакты, мы&nbsp;вам перезвоним, уточним ваш адрес и&nbsp;отправим нашего специалиста по&nbsp;указанному адресу</p>
+
+                  <p class="text-small">Отправляя заявку, вы&nbsp;соглашаетесь с&nbsp;правилами обработки <a class="link--border" href="#">персональных данных</a> и&nbsp; <a class="link--border" href="#">политикой конфиденциальности</a></p>
+                </div>
+              </div>
+
+              <div class="grid__item">
+                <form class="form">
+                  <div class="form__item">
+                    <div class="form__field">
+                      <div class="form__row">
+                        <div class="form__control">
+                          <input class="form__input  form__input--phone  input-phone-modal" placeholder="Номер телефона" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form__item">
+                    <div class="form__field">
+                      <div class="form__row">
+                        <div class="form__control">
+                          <input class="form__input  form__input--name" placeholder="Имя" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form__item">
+                    <div class="form__field">
+                      <div class="form__row">
+                        <div class="form__control">
+                          <button style="width: 100%;" class="btn" type="submit">Перезвоните мне</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
 
 
     </div>

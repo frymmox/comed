@@ -136,7 +136,7 @@
             <li><a href="#">Карта сайта</a></li>
             <li><a href="#">Способы оплаты</a></li>
             <li><a href="#">Прайс-лист</a></li>
-            <li><a href="#">Юр. информация</a></li>
+            <li><a href="legal-information.html">Юр. информация</a></li>
             <li><a href="#">Отзывы</a></li>
           </ul>
 
@@ -160,3 +160,71 @@
     </div>
   </div>
 </footer>
+
+<div class="modal">
+  <div class="modal__overlay"></div>
+
+  <div class="modal__window">
+    <div class="modal__close">
+      <button class="js-modal-close" aria-label="Закрыть" type="button">
+        <svg width="32" height="32">
+          <use href="img/sprite.svg#cross"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal__content">
+      <section class="scene">
+        <div class="grid">
+          <div class="grid__wrap">
+            <div class="grid__list  grid__list--two">
+              <div class="grid__item">
+                <div class="wysiwyg">
+                  <h2>Вызвать врача на&nbsp;дом</h2>
+
+                  <p class="text-desc">Оставьте свои контакты, мы&nbsp;вам перезвоним, уточним ваш адрес и&nbsp;отправим нашего специалиста по&nbsp;указанному адресу</p>
+
+                  <p class="text-small">Отправляя заявку, вы&nbsp;соглашаетесь с&nbsp;правилами обработки <a class="link--border" href="#">персональных данных</a> и&nbsp; <a class="link--border" href="#">политикой конфиденциальности</a></p>
+                </div>
+              </div>
+
+              <div class="grid__item">
+                <form class="form">
+                  <div class="form__item">
+                    <div class="form__field">
+                      <div class="form__row">
+                        <div class="form__control">
+                          <input class="form__input  form__input--phone  input-phone-modal" placeholder="Номер телефона" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form__item">
+                    <div class="form__field">
+                      <div class="form__row">
+                        <div class="form__control">
+                          <input class="form__input  form__input--name" placeholder="Имя" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form__item">
+                    <div class="form__field">
+                      <div class="form__row">
+                        <div class="form__control">
+                          <button style="width: 100%;" class="btn" type="submit">Перезвоните мне</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

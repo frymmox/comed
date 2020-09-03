@@ -1,0 +1,149 @@
+.contacts {
+  padding-top: 0;
+
+  @media (min-width: @breakpoint-xl) {
+    flex-grow: 1;
+  }
+}
+
+.contacts__grid {
+  @media (max-width: @breakpoint-xl - 1px) {
+    --element-gap-vertical: 0;
+  }
+
+  @media (min-width: @breakpoint-xl) {
+    flex-grow: 1;
+  }
+}
+
+.contacts__content,
+.contacts__accent {
+  @media (max-width: @breakpoint-xl - 1px) {
+    width: 100% !important;
+  }
+}
+
+.contacts__content {
+  @media (min-width: @breakpoint-xl) {
+    align-self: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.contacts__card {
+  @media (min-width: @breakpoint-xl) {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: @border-radius;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.04);
+  }
+}
+
+.contacts__map {
+  @media (max-width: @breakpoint-xl - 1px) {
+    height: 50vh;
+    min-height: 300px;
+    margin-left: ~"calc(var(--element-gap-horizontal, @{element-gap-horizontal}) * -1)";
+    margin-right: ~"calc(var(--element-gap-horizontal, @{element-gap-horizontal}) * -1)";
+  }
+
+  @media (min-width: @breakpoint-xl) {
+    height: 100%;
+    width: 100vw;
+    margin-left: ~"calc(-50vw - var(--element-gap-horizontal, @{element-gap-horizontal}) / 1.5)";
+  }
+}
+
+.contacts__main {
+  border-bottom: 1px solid #F0F2F4;
+  margin-bottom: 24px;
+}
+
+.contacts__title,
+.contacts__phone,
+.contacts__email,
+.contacts__adress,
+.contacts__hours {
+  margin-bottom: 24px;
+
+  h3 {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    color: #8893AA;
+    font-weight: 500;
+  }
+
+  a {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+
+  span {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.contacts__title {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: bold;
+    letter-spacing: -0.05em;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.contacts__phone {
+  ul {
+    display: flex;
+  }
+
+  li {
+    line-height: 0;
+  }
+}
+
+.contacts__adress {
+  p {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+}
+
+.contacts__hours {
+  li {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+}
+
+.contacts__desc {
+  span {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    letter-spacing: -0.02em;
+    color: #8893AA;
+  }
+
+  @media (max-width: @breakpoint-xl - 1px) {
+    margin-bottom: 24px;
+  }
+}

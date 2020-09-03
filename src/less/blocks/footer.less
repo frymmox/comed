@@ -34,11 +34,11 @@
 .footer__list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -@element-gap-horizontal;
-  margin-bottom: -@element-gap-vertical;
+  margin-right: ~"calc(var(--element-gap-horizontal, @{element-gap-horizontal}) * -1)";
+  margin-bottom: ~"calc(var(--element-gap-vertical, @{element-gap-vertical}) * -1)";
 
   & + & {
-    margin-top: @element-gap-vertical;
+    margin-top: var(--element-gap-vertical, @element-gap-vertical);
   }
 
   &--top {
@@ -47,10 +47,12 @@
 }
 
 .footer__item {
+  --element-gap-vertical: 48px;
+
   width: 100%;
   border: 0 solid transparent;
-  border-right-width: @element-gap-horizontal;
-  border-bottom-width: @element-gap-vertical;
+  border-right-width: var(--element-gap-horizontal, @element-gap-horizontal);
+  border-bottom-width: var(--element-gap-vertical, @element-gap-vertical);
 
   &--first {
     p {

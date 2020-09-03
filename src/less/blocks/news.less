@@ -1,8 +1,6 @@
 .news {
   width: 100%;
   padding-bottom: var(--block-gap-vertical, @block-gap-vertical);
-  padding-right: var(--block-gap-horizontal, @block-gap-horizontal);
-  padding-left: var(--block-gap-horizontal, @block-gap-horizontal);
 
   @media (min-width: @breakpoint-xl) {
     padding-bottom: 136px;
@@ -13,4 +11,10 @@
   max-width: @breakpoint-lg;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 64px;
+
+  @media (max-width: @breakpoint-xl - 1px) {
+    padding-right: var(--block-gap-horizontal, @block-gap-horizontal);
+    padding-left: var(--block-gap-horizontal, @block-gap-horizontal);
+  }
 }

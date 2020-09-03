@@ -1,9 +1,5 @@
 :root {
-  @media (min-width: @breakpoint-lg) {
-    --block-gap-horizontal: 48px;
-  }
-
-  @media (min-width: @breakpoint-lg) {
+  @media (min-width: @breakpoint-xl) {
     --block-gap-horizontal: 80px;
     --block-gap-vertical: 80px;
   }
@@ -122,12 +118,12 @@ sub {
   font-size: 0.75em;
 }
 
-a {
+a, .link {
   cursor: pointer;
   color: @link-color;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
-  transition-property: color;
+  transition-property: color, border-bottom;
   text-decoration: none;
 
   &:hover {
