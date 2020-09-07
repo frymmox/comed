@@ -8,6 +8,7 @@
     <meta name="format-detection" content="address=no">
     <link rel="stylesheet" href="libs.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="../img/favicon.png" sizes="32x32" >
   </head>
   <body>
     <div class="page">
@@ -22,7 +23,7 @@
             <use href="img/sprite.svg#bag"></use>
           </svg>
         </span>
-        <span type="button" href="#" class="link  js-modal-open">Вызвать врача на дом</span>
+        <span class="link  js-modal-doctor-open">Вызвать врача на дом</span>
       </div>
 
       <div class="header-top__search">
@@ -59,7 +60,7 @@
 
           <div class="language__dropdown">
             <ul class="language__menu">
-              <li class="language__item">
+              <li class="language__item  language__item--active">
                 <span class="icon">
                   <svg width="24" height="24">
                     <use href="img/sprite.svg#russia"></use>
@@ -70,43 +71,10 @@
               <li class="language__item">
                 <span class="icon">
                   <svg width="24" height="24">
-                    <use href="img/sprite.svg#ukraine"></use>
-                  </svg>
-                </span>
-
-                <a href="#">Українська</a>
-              </li>
-              <li class="language__item  language__item--active">
-                <span class="icon">
-                  <svg width="24" height="24">
                     <use href="img/sprite.svg#english"></use>
                   </svg>
                 </span>
                 <a href="#">English</a>
-              </li>
-              <li class="language__item">
-                <span class="icon">
-                  <svg width="24" height="24">
-                    <use href="img/sprite.svg#arabia"></use>
-                  </svg>
-                </span>
-                <a href="#">العربية</a>
-              </li>
-              <li class="language__item">
-                <span class="icon">
-                  <svg width="24" height="24">
-                    <use href="img/sprite.svg#kazakhstan"></use>
-                  </svg>
-                </span>
-                <a href="#">Казахский</a>
-              </li>
-              <li class="language__item">
-                <span class="icon">
-                  <svg width="24" height="24">
-                    <use href="img/sprite.svg#vietnam"></use>
-                  </svg>
-                </span>
-                <a href="#">Tiếng Việt</a>
               </li>
             </ul>
           </div>
@@ -168,10 +136,7 @@
 
               <div id="menu-company" class="header__dropdown  menu-dropdown">
                 <ul class="menu-dropdown__list">
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
+                  <li class="menu-dropdown__item"><a href="news.html">Новости и акции</a></li>
                 </ul>
               </div>
             </li>
@@ -188,10 +153,9 @@
 
               <div id="menu-researches" class="header__dropdown  menu-dropdown">
                 <ul class="menu-dropdown__list">
+                  <li class="menu-dropdown__item"><a href="diagnostics.html">Диагностика</a></li>
                   <li class="menu-dropdown__item"><a href="patient-support.html">Центр поддержки пациентов</a></li>
-                  <li class="menu-dropdown__item"><a href="list-studies.html">Перечень исследований проводимых в клинике</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
+                  <li class="menu-dropdown__item"><a href="#">Информация по заболеваниям</a></li>
                 </ul>
               </div>
             </li>
@@ -208,33 +172,15 @@
 
               <div id="menu-services" class="header__dropdown  menu-dropdown">
                 <ul class="menu-dropdown__list">
-                  <li class="menu-dropdown__item"><a href="diagnostics.html">Диагностика</a></li>
                   <li class="menu-dropdown__item"><a href="laser-medicine.html">Центр лазерной медицины</a></li>
+                  <li class="menu-dropdown__item"><a href="diagnostics.html">Диагностика</a></li>
                   <li class="menu-dropdown__item"><a href="commitment-therapy.html">Центр приверженности терапии</a></li>
-                  <li class="menu-dropdown__item"><a href="policy-oms.html">Медицинская помощь по полису ОМС</a></li>
                 </ul>
               </div>
             </li>
 
-            <li class="header__link">
-              <a href="team.html" class="js-collapse-toggle" data-target="#menu-team">
-                Команда
-                <span class="icon  header__arrow">
-                  <svg width="8" height="6">
-                    <use href="img/sprite.svg#arrow"></use>
-                  </svg>
-                </span>
-              </a>
+            <li class="header__link"><a href="team.html">Команда</a></li>
 
-              <div id="menu-team" class="header__dropdown  menu-dropdown">
-                <ul class="menu-dropdown__list">
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                </ul>
-              </div>
-            </li>
             <li class="header__link"><a href="contacts.html">Контакты</a></li>
           </ul>
         </nav>
@@ -242,7 +188,7 @@
 
       <div class="header__phone  header__phone--desk">
         <p>+7(999)000-00-00</p>
-        <a href="">Заказать звонок</a>
+        <span class="link  js-modal-call-open">Заказать звонок</span>
       </div>
     </div>
   </div>
@@ -266,7 +212,7 @@
 		<div class="grid__wrap">
 			<div class="grid__list">
 				<div class="grid__item">
-					<div class="wysiwyg">
+					<div class="wysiwyg  wysiwyg--content">
 						<h1>Юридическая информация</h1>
 
 						<p>Услуги оказываемые в&nbsp;центре Управления делами Президента&nbsp;РФ, соответствуют мировым стандартам качества, что подтверждается высокой оценкой независимых российских и&nbsp;международных агенств по&nbsp;сертификации</p>
@@ -473,7 +419,7 @@
 
             <div class="language__dropdown">
               <ul class="language__menu">
-                <li class="language__item">
+                <li class="language__item  language__item--active">
                   <span class="icon">
                     <svg width="24" height="24">
                       <use href="img/sprite.svg#russia"></use>
@@ -484,43 +430,10 @@
                 <li class="language__item">
                   <span class="icon">
                     <svg width="24" height="24">
-                      <use href="img/sprite.svg#ukraine"></use>
-                    </svg>
-                  </span>
-
-                  <a href="#">Українська</a>
-                </li>
-                <li class="language__item  language__item--active">
-                  <span class="icon">
-                    <svg width="24" height="24">
                       <use href="img/sprite.svg#english"></use>
                     </svg>
                   </span>
                   <a href="#">English</a>
-                </li>
-                <li class="language__item">
-                  <span class="icon">
-                    <svg width="24" height="24">
-                      <use href="img/sprite.svg#arabia"></use>
-                    </svg>
-                  </span>
-                  <a href="#">العربية</a>
-                </li>
-                <li class="language__item">
-                  <span class="icon">
-                    <svg width="24" height="24">
-                      <use href="img/sprite.svg#kazakhstan"></use>
-                    </svg>
-                  </span>
-                  <a href="#">Казахский</a>
-                </li>
-                <li class="language__item">
-                  <span class="icon">
-                    <svg width="24" height="24">
-                      <use href="img/sprite.svg#vietnam"></use>
-                    </svg>
-                  </span>
-                  <a href="#">Tiếng Việt</a>
                 </li>
               </ul>
             </div>
@@ -549,17 +462,17 @@
       <div class="footer__item  footer__item--first">
         <div class="footer__phone">
           <p>+7(999)000-00-00</p>
-          <a href="#">Заказать звонок</a>
+          <a href="#" class="js-modal-call-open">Заказать звонок</a>
         </div>
 
         <div class="footer__email">
           <p><a href="mailto:komed@inbox.ru">komed@inbox.ru</a></p>
-          <a href="#">Задать вопрос</a>
+          <a href="#" class="js-modal-question-open">Задать вопрос</a>
         </div>
 
         <div class="footer__address">
           <p>Москва, Большеохтинская, 13</p>
-          <a href="#">Показать на карте</a>
+          <a href="contacts.html">Показать на карте</a>
         </div>
       </div>
 
@@ -577,10 +490,8 @@
           <ul class="footer__menu">
             <li><a href="#">Контакты</a></li>
             <li><a href="#">Карта сайта</a></li>
-            <li><a href="#">Способы оплаты</a></li>
             <li><a href="#">Прайс-лист</a></li>
             <li><a href="legal-information.html">Юр. информация</a></li>
-            <li><a href="#">Отзывы</a></li>
           </ul>
 
           <div class="footer__action">
@@ -604,12 +515,12 @@
   </div>
 </footer>
 
-<div class="modal">
+<div class="modal  js-modal-doctor">
   <div class="modal__overlay"></div>
 
   <div class="modal__window">
     <div class="modal__close">
-      <button class="js-modal-close" aria-label="Закрыть" type="button">
+      <button class="js-modal-doctor-close" aria-label="Закрыть" type="button">
         <svg width="32" height="32">
           <use href="img/sprite.svg#cross"></use>
         </svg>
@@ -627,7 +538,7 @@
 
                   <p class="text-desc">Оставьте свои контакты, мы&nbsp;вам перезвоним, уточним ваш адрес и&nbsp;отправим нашего специалиста по&nbsp;указанному адресу</p>
 
-                  <p class="text-small">Отправляя заявку, вы&nbsp;соглашаетесь с&nbsp;правилами обработки <a class="link--border" href="#">персональных данных</a> и&nbsp; <a class="link--border" href="#">политикой конфиденциальности</a></p>
+                  <p class="text-small">Отправляя заявку, вы&nbsp;принимаете условия <a class="link--border" href="#">Пользовательского соглашения</a> и&nbsp;даете своё согласие на&nbsp;<a class="link--border" href="#">Обработку персональной информации</a> на&nbsp;условиях, определенных <a class="link--border" href="#">Политикой конфиденциальности</a></p>
                 </div>
               </div>
 
@@ -637,7 +548,153 @@
                     <div class="form__field">
                       <div class="form__row">
                         <div class="form__control">
-                          <input class="form__input  form__input--phone  input-phone-modal" placeholder="Номер телефона" required>
+                          <input class="form__input  form__input--phone  input-phone" placeholder="Номер телефона" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form__item">
+                    <div class="form__field">
+                      <div class="form__row">
+                        <div class="form__control">
+                          <input class="form__input  form__input--name" placeholder="Имя" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form__item">
+                    <div class="form__field">
+                      <div class="form__row">
+                        <div class="form__control">
+                          <input class="form__input  form__input--address" placeholder="Адрес" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form__item">
+                    <div class="form__field">
+                      <div class="form__row">
+                        <div class="form__control">
+                          <button style="width: 100%;" class="btn" type="submit">Перезвоните мне</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div class="modal  js-modal-call">
+  <div class="modal__overlay"></div>
+
+  <div class="modal__window">
+    <div class="modal__close">
+      <button class="js-modal-call-close" aria-label="Закрыть" type="button">
+        <svg width="32" height="32">
+          <use href="img/sprite.svg#cross"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal__content">
+      <section class="scene">
+        <div class="grid">
+          <div class="grid__wrap">
+            <div class="grid__list  grid__list--two">
+              <div class="grid__item">
+                <div class="wysiwyg">
+                  <h2>Заказать звонок</h2>
+
+                  <p class="text-desc">Оставьте свои контакты, мы вам перезвоним вам в ближайшее время</p>
+
+                  <p class="text-small">Отправляя заявку, вы&nbsp;принимаете условия <a class="link--border" href="#">Пользовательского соглашения</a> и&nbsp;даете своё согласие на&nbsp;<a class="link--border" href="#">Обработку персональной информации</a> на&nbsp;условиях, определенных <a class="link--border" href="#">Политикой конфиденциальности</a></p>
+                </div>
+              </div>
+
+              <div class="grid__item">
+                <form class="form">
+                  <div class="form__item">
+                    <div class="form__field">
+                      <div class="form__row">
+                        <div class="form__control">
+                          <input class="form__input  form__input--phone  input-phone" placeholder="Номер телефона" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form__item">
+                    <div class="form__field">
+                      <div class="form__row">
+                        <div class="form__control">
+                          <input class="form__input  form__input--name" placeholder="Имя" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form__item">
+                    <div class="form__field">
+                      <div class="form__row">
+                        <div class="form__control">
+                          <button style="width: 100%;" class="btn" type="submit">Перезвоните мне</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div class="modal  js-modal-question">
+  <div class="modal__overlay"></div>
+
+  <div class="modal__window">
+    <div class="modal__close">
+      <button class="js-modal-question-close" aria-label="Закрыть" type="button">
+        <svg width="32" height="32">
+          <use href="img/sprite.svg#cross"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal__content">
+      <section class="scene">
+        <div class="grid">
+          <div class="grid__wrap">
+            <div class="grid__list  grid__list--two">
+              <div class="grid__item">
+                <div class="wysiwyg">
+                  <h2>Задать вопрос</h2>
+
+                  <p class="text-desc">Оставьте свои контакты, мы вам перезвоним вам в ближайшее время и ответим на все вопросы</p>
+
+                  <p class="text-small">Отправляя заявку, вы&nbsp;принимаете условия <a class="link--border" href="#">Пользовательского соглашения</a> и&nbsp;даете своё согласие на&nbsp;<a class="link--border" href="#">Обработку персональной информации</a> на&nbsp;условиях, определенных <a class="link--border" href="#">Политикой конфиденциальности</a></p>
+                </div>
+              </div>
+
+              <div class="grid__item">
+                <form class="form">
+                  <div class="form__item">
+                    <div class="form__field">
+                      <div class="form__row">
+                        <div class="form__control">
+                          <input class="form__input  form__input--phone  input-phone" placeholder="Номер телефона" required>
                         </div>
                       </div>
                     </div>

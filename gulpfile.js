@@ -41,7 +41,8 @@ exports.styles = styles
 
 const stylesLibs = () => {
   return src([
-      'node_modules/swiper/swiper-bundle.min.css'
+      'node_modules/swiper/swiper-bundle.min.css',
+      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css'
     ])
     .pipe(concat('libs.css'))
     .pipe(dest('docs'))
@@ -57,7 +58,9 @@ const scriptsLibs = () => {
       'node_modules/focus-visible/dist/focus-visible.min.js',
       'node_modules/scroll-lock/dist/scroll-lock.min.js',
       'node_modules/swiper/swiper-bundle.min.js',
-      'node_modules/inputmask/dist/inputmask.min.js'
+      'node_modules/inputmask/dist/inputmask.min.js',
+      'node_modules/jquery/dist/jquery.min.js',
+      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'
     ])
     .pipe(concat('libs.js'))
     .pipe(dest('docs'))

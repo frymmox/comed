@@ -27,6 +27,9 @@ const swiperPerView = new Swiper('.swiper-per-view', {
     1300: {
       slidesPerView: 4,
     },
+    1920: {
+      slidesPerView: 5,
+    },
   },
 
   navigation: {
@@ -35,13 +38,8 @@ const swiperPerView = new Swiper('.swiper-per-view', {
   },
 });
 
-const inputPhone = document.querySelector('.input-phone');
-const inputPhoneModal = document.querySelector('.input-phone-modal');
+const inputPhones = document.querySelectorAll('.input-phone');
 
-if(inputPhone) {
-  Inputmask({"mask": "+7(999) 999-99-99"}).mask(inputPhone);
-}
-
-if(inputPhoneModal) {
-  Inputmask({"mask": "+7(999) 999-99-99"}).mask(inputPhoneModal);
+if(inputPhones) {
+  Inputmask({"mask": "+7(999) 999-99-99"}).mask(inputPhones);
 }

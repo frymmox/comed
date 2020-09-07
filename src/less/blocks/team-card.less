@@ -26,13 +26,18 @@
 .team-card__tag {
   margin-bottom: 14px;
 
-  span {
+  a {
     border: 1px solid #E1E4EA;
     padding: 4px 8px;
     border-radius: @border-radius;
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.25rem;
+    transition-property: color, border-color;
+
+    &:hover {
+      border-color: #EB3300;
+    }
   }
 }
 

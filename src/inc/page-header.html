@@ -7,7 +7,7 @@
             <use href="img/sprite.svg#bag"></use>
           </svg>
         </span>
-        <span type="button" href="#" class="link  js-modal-open">Вызвать врача на дом</span>
+        <span class="link  js-modal-doctor-open">Вызвать врача на дом</span>
       </div>
 
       <div class="header-top__search">
@@ -44,7 +44,7 @@
 
           <div class="language__dropdown">
             <ul class="language__menu">
-              <li class="language__item">
+              <li class="language__item  language__item--active">
                 <span class="icon">
                   <svg width="24" height="24">
                     <use href="img/sprite.svg#russia"></use>
@@ -55,43 +55,10 @@
               <li class="language__item">
                 <span class="icon">
                   <svg width="24" height="24">
-                    <use href="img/sprite.svg#ukraine"></use>
-                  </svg>
-                </span>
-
-                <a href="#">Українська</a>
-              </li>
-              <li class="language__item  language__item--active">
-                <span class="icon">
-                  <svg width="24" height="24">
                     <use href="img/sprite.svg#english"></use>
                   </svg>
                 </span>
                 <a href="#">English</a>
-              </li>
-              <li class="language__item">
-                <span class="icon">
-                  <svg width="24" height="24">
-                    <use href="img/sprite.svg#arabia"></use>
-                  </svg>
-                </span>
-                <a href="#">العربية</a>
-              </li>
-              <li class="language__item">
-                <span class="icon">
-                  <svg width="24" height="24">
-                    <use href="img/sprite.svg#kazakhstan"></use>
-                  </svg>
-                </span>
-                <a href="#">Казахский</a>
-              </li>
-              <li class="language__item">
-                <span class="icon">
-                  <svg width="24" height="24">
-                    <use href="img/sprite.svg#vietnam"></use>
-                  </svg>
-                </span>
-                <a href="#">Tiếng Việt</a>
               </li>
             </ul>
           </div>
@@ -153,10 +120,7 @@
 
               <div id="menu-company" class="header__dropdown  menu-dropdown">
                 <ul class="menu-dropdown__list">
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
+                  <li class="menu-dropdown__item"><a href="news.html">Новости и акции</a></li>
                 </ul>
               </div>
             </li>
@@ -173,10 +137,9 @@
 
               <div id="menu-researches" class="header__dropdown  menu-dropdown">
                 <ul class="menu-dropdown__list">
+                  <li class="menu-dropdown__item"><a href="diagnostics.html">Диагностика</a></li>
                   <li class="menu-dropdown__item"><a href="patient-support.html">Центр поддержки пациентов</a></li>
-                  <li class="menu-dropdown__item"><a href="list-studies.html">Перечень исследований проводимых в клинике</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
+                  <li class="menu-dropdown__item"><a href="#">Информация по заболеваниям</a></li>
                 </ul>
               </div>
             </li>
@@ -193,33 +156,15 @@
 
               <div id="menu-services" class="header__dropdown  menu-dropdown">
                 <ul class="menu-dropdown__list">
-                  <li class="menu-dropdown__item"><a href="diagnostics.html">Диагностика</a></li>
                   <li class="menu-dropdown__item"><a href="laser-medicine.html">Центр лазерной медицины</a></li>
+                  <li class="menu-dropdown__item"><a href="diagnostics.html">Диагностика</a></li>
                   <li class="menu-dropdown__item"><a href="commitment-therapy.html">Центр приверженности терапии</a></li>
-                  <li class="menu-dropdown__item"><a href="policy-oms.html">Медицинская помощь по полису ОМС</a></li>
                 </ul>
               </div>
             </li>
 
-            <li class="header__link">
-              <a href="team.html" class="js-collapse-toggle" data-target="#menu-team">
-                Команда
-                <span class="icon  header__arrow">
-                  <svg width="8" height="6">
-                    <use href="img/sprite.svg#arrow"></use>
-                  </svg>
-                </span>
-              </a>
+            <li class="header__link"><a href="team.html">Команда</a></li>
 
-              <div id="menu-team" class="header__dropdown  menu-dropdown">
-                <ul class="menu-dropdown__list">
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                  <li class="menu-dropdown__item"><a href="#">Lorem ipsum</a></li>
-                </ul>
-              </div>
-            </li>
             <li class="header__link"><a href="contacts.html">Контакты</a></li>
           </ul>
         </nav>
@@ -227,7 +172,7 @@
 
       <div class="header__phone  header__phone--desk">
         <p>+7(999)000-00-00</p>
-        <a href="">Заказать звонок</a>
+        <span class="link  js-modal-call-open">Заказать звонок</span>
       </div>
     </div>
   </div>
